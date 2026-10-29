@@ -5,6 +5,7 @@
 //[.] Extract the second byte: '4F' 
 //[.] Reverse the bytes: by moving the first one to lower position and second one to higher position
 //[.] Combine the result -- and print
+//[.] Check for host byte order
 
 #include <stdio.h>
 #include <stdint.h>
@@ -42,7 +43,7 @@ int main(){
     scanf("%hx", &hexCode);
 
     //check for little-endian
-    if (is_little_endian){
+    if (is_little_endian()){
         printf("Is a little-endian system\n");
         //convert to network byte order(big-endian)
         uint16_t networkByte = htons_16(hexCode);
