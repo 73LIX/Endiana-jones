@@ -3,7 +3,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-//change byte order (logic)
+//change byte order
 static inline uint16_t byteOrder_Conv(uint16_t value){
     uint16_t highByte = value & 0xFF00;
     uint16_t lowByte = value & 0x00FF;
