@@ -58,10 +58,10 @@ int main(){
 
     //hstontk()
     uint16_t networkByte = hstontk(host);
-    printf("%hx \n", networkByte);
+    printf("%04hx \n", networkByte);
     
     //ntkohst()
     host = ntkohst(networkByte);
-    printf("%hx \n", host);
+    printf("%04hx \n", host);
     return 0;
 }
