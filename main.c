@@ -2,7 +2,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-//change byte order(logic)
+//change byte order
 uint16_t byteOrder_Conv(uint16_t value){
     //isolate the first byte using logical right shift
     //each hexa digit represents 4bits(nibble) so to shift by 2 nibbles we need to shift 2*4 = 8bits
