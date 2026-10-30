@@ -2,6 +2,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+//change byte order(logic)
 uint16_t byteOrder_Conv(uint16_t value){
     //isolate the first byte using logical right shift
     //each hexa digit represents 4bits(nibble) so to shift by 2 nibbles we need to shift 2*4 = 8bits
@@ -14,7 +15,8 @@ uint16_t byteOrder_Conv(uint16_t value){
     return (highByte >> 8) | (lowByte << 8);
 }
 
-bool is_little_endian(){
+//check host's endianness
+bool is_little_endian(void){
     uint16_t num = 1;
     uint8_t *byte_ptr = (uint8_t *)&num; //checking the first byte (8bits)
 
