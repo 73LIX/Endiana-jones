@@ -33,7 +33,7 @@ A lot of times when you're building packets you will need to make sure your Byte
 ### What does Endiana-Jones do?
 You need to make sure your Byte Order isn't wrong when building packets or specifying, IP addresses, port numbers, etc etc. But how can you do this if you don't know what's your native Host Byte Order?
 
-**Endiana-Jones** provides you with the necessary functions through which you pass the values (2-bytes only for now) to make it Big-Endian(Network Byte Order) or Little-Endian(Host Byet Order). The function will handle the conversion if it's required.
+**Endiana-Jones** provides you with the necessary functions through which you pass the values (2-bytes only for now) to make it Big-Endian(Network Byte Order) or Little-Endian(Host Byte Order). The function will handle the conversion if it's required.
 
 Currently supports:
 - `hstontk(your_host_bytes)`: Host to Network (2-bytes) - Checks the current systems endianness, if it's Little-Endian then converts it into Big-Endian for network.
